@@ -41,5 +41,13 @@ select * from pulsar."public/default".generator_test;
 
 select count(*) from pulsar."public/default".generator_test;
 
-
+presto> show schemas in pulsar;
+       Schema       
+--------------------
+ information_schema 
+ public/default     
+ public/functions   
+ pulsar/system      
+ sample/ns1         
+(5 rows)
 ```
