@@ -32,4 +32,7 @@ show schemas in system;
 
 show tables in system."metadata";
 
+SELECT COUNT(*) AS number_of_messages 
+FROM pulsar."public/default".
+
 ```
