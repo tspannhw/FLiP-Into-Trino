@@ -20,4 +20,14 @@ Splits: 17 total, 17 done (100.00%)
 0:04 [1 rows, 78B] [0 rows/s, 21B/s]
 
 
+show catalogs;
+
+show schemas in pulsar;
+
+show tables in pulsar."public/default";
+
+show schemas in system;
+
+show tables in system."metadata";
+
 ```
