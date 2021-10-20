@@ -50,4 +50,45 @@ presto> show schemas in pulsar;
  pulsar/system      
  sample/ns1         
 (5 rows)
+
+
+```
+
+# Table Built with a Schema
+
+```
+presto> describe pulsar."public/default".iotjetsonjson;
+      Column       |   Type    | Extra |                                   Comment                                   
+-------------------+-----------+-------+-----------------------------------------------------------------------------
+ camera            | varchar   |       | ["null","string"]                                                           
+ cpu               | double    |       | "double"                                                                    
+ cputemp           | varchar   |       | ["null","string"]                                                           
+ cputempf          | varchar   |       | ["null","string"]                                                           
+ diskusage         | varchar   |       | ["null","string"]                                                           
+ filename          | varchar   |       | ["null","string"]                                                           
+ gputemp           | varchar   |       | ["null","string"]                                                           
+ gputempf          | varchar   |       | ["null","string"]                                                           
+ host              | varchar   |       | ["null","string"]                                                           
+ host_name         | varchar   |       | ["null","string"]                                                           
+ imageinput        | varchar   |       | ["null","string"]                                                           
+ ipaddress         | varchar   |       | ["null","string"]                                                           
+ macaddress        | varchar   |       | ["null","string"]                                                           
+ memory            | double    |       | "double"                                                                    
+ networktime       | double    |       | "double"                                                                    
+ runtime           | varchar   |       | ["null","string"]                                                           
+ systemtime        | varchar   |       | ["null","string"]                                                           
+ te                | varchar   |       | ["null","string"]                                                           
+ top1              | varchar   |       | ["null","string"]                                                           
+ top1pct           | double    |       | "double"                                                                    
+ uuid              | varchar   |       | ["null","string"]                                                           
+ __partition__     | integer   |       | The partition number which the message belongs to                           
+ __event_time__    | timestamp |       | Application defined timestamp in milliseconds of when the event occurred    
+ __publish_time__  | timestamp |       | The timestamp in milliseconds of when event as published                    
+ __message_id__    | varchar   |       | The message ID of the message used to generate this row                     
+ __sequence_id__   | bigint    |       | The sequence ID of the message used to generate this row                    
+ __producer_name__ | varchar   |       | The name of the producer that publish the message used to generate this row 
+ __key__           | varchar   |       | The partition key for the topic                                             
+ __properties__    | varchar   |       | User defined properties                                                     
+(29 rows)
+
 ```
