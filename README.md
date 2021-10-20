@@ -33,6 +33,13 @@ show schemas in system;
 show tables in system."metadata";
 
 SELECT COUNT(*) AS number_of_messages 
-FROM pulsar."public/default".
+FROM pulsar."public/default".iotjetsonjson;
+
+select * from pulsar."public/default".iotjetsonjson;
+
+select * from pulsar."public/default".generator_test;
+
+select count(*) from pulsar."public/default".generator_test;
+
 
 ```
