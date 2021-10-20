@@ -26,6 +26,8 @@ show schemas in pulsar;
 
 show tables in pulsar."public/default";
 
+select * from pulsar."public/default"."weather";
+
 show schemas in system;
 
 show tables in system."metadata";
