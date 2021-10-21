@@ -175,8 +175,9 @@ CREATE TABLE pulsar."public/default".weathersink
 
 ```
 
-## Consume IoT3
+## Consume Pulsar Topics From Console Client
 
 ```
 bin/pulsar-client consume "persistent://public/default/iot3" -s "iot3reader" -n 0
+bin/pulsar-client consume "persistent://public/default/iotjetsonjson" -s "iotjjreader" -n 0
 ```
