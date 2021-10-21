@@ -128,7 +128,7 @@ CREATE TABLE pulsar."public/default".iotjetsonjson (
 	"__properties__" varchar
 );
 
-CREATE TABLE pulsar."public/default".weathersink
+CREATE TABLE memory.sn.weather
 (
  noNamespaceSchemaLocation varchar ,
  version varchar ,
@@ -173,6 +173,8 @@ CREATE TABLE pulsar."public/default".weathersink
  privacy_policy_url  varchar 
 )
 
+ describe memory.sn.weather;
+ 
 ```
 
 ## Consume Pulsar Topics From Console Client
