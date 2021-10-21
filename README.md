@@ -91,4 +91,86 @@ presto> describe pulsar."public/default".iotjetsonjson;
  __properties__    | varchar   |       | User defined properties                                                     
 (29 rows)
 
+
+-- Drop table
+
+-- DROP TABLE pulsar."public/default".iotjetsonjson;
+
+CREATE TABLE pulsar."public/default".iotjetsonjson (
+	camera varchar,
+	cpu double,
+	cputemp varchar,
+	cputempf varchar,
+	diskusage varchar,
+	filename varchar,
+	gputemp varchar,
+	gputempf varchar,
+	host varchar,
+	host_name varchar,
+	imageinput varchar,
+	"ipaddress" varchar,
+	macaddress varchar,
+	memory double,
+	networktime double,
+	runtime varchar,
+	systemtime varchar,
+	te varchar,
+	top1 varchar,
+	top1pct double,
+	"uuid" varchar,
+	"__partition__" integer,
+	"__event_time__" timestamp,
+	"__publish_time__" timestamp,
+	"__message_id__" varchar,
+	"__sequence_id__" bigint,
+	"__producer_name__" varchar,
+	"__key__" varchar,
+	"__properties__" varchar
+);
+
+CREATE TABLE pulsar."public/default".weathersink
+(
+ noNamespaceSchemaLocation STRING ,
+ version STRING ,
+ location  STRING , 
+ observation_time  STRING , 
+ credit  STRING , 
+ credit_url  STRING , 
+ image  STRING , 
+ suggested_pickup  STRING , 
+ suggested_pickup_period BIGINT,
+ station_id  STRING , 
+ latitude DOUBLE, 
+ longitude DOUBLE, 
+ observation_time_rfc822  STRING , 
+ weather  STRING , 
+ temperature_ STRING   ,
+ temp_f DOUBLE, temp_c DOUBLE, 
+ relative_humidity BIGINT, 
+ wind_ STRING    , 
+ wind_dir  STRING , 
+ wind_degrees BIGINT, 
+ wind_mph DOUBLE, 
+ wind_gust_mph DOUBLE, 
+ wind_kt BIGINT,
+ wind_gust_kt BIGINT, 
+ pressure_ STRING   , 
+ pressure_mb DOUBLE, 
+ pressure_in DOUBLE, 
+ dewpoint_ STRING    , 
+ dewpoint_f DOUBLE, 
+ dewpoint_c DOUBLE, 
+ windchill_ STRING    ,
+ windchill_f BIGINT, 
+ windchill_c BIGINT, 
+ visibility_mi DOUBLE, 
+ icon_url_base  STRING , 
+ two_day_history_url  STRING , 
+ icon_url_name  STRING , 
+ ob_url  STRING , 
+ disclaimer_url  STRING ,
+ copyright_url  STRING , 
+ privacy_policy_url  STRING 
+)
+
 ```
