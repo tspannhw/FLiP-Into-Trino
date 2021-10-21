@@ -174,3 +174,9 @@ CREATE TABLE pulsar."public/default".weathersink
 )
 
 ```
+
+## Consume IoT3
+
+```
+bin/pulsar-client consume "persistent://public/default/iot3" -s "iot3reader" -n 0
+```
