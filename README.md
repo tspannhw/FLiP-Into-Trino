@@ -182,6 +182,12 @@ bin/pulsar-client consume "persistent://public/default/iot3" -s "iot3reader" -n 
 bin/pulsar-client consume "persistent://public/default/iotjetsonjson" -s "iotjjreader" -n 0
 ```
 
+## Example Queries
+
+```
+select max(gputempf) as maxgputempf, max(cputemp) as maxcputemp, max(memory) as maxmemory from pulsar."public/default".iotjetsonjson;
+```
+
 ## References
 
 * https://pulsar.apache.org/docs/en/sql-deployment-configurations/
