@@ -181,3 +181,18 @@ CREATE TABLE pulsar."public/default".weathersink
 bin/pulsar-client consume "persistent://public/default/iot3" -s "iot3reader" -n 0
 bin/pulsar-client consume "persistent://public/default/iotjetsonjson" -s "iotjjreader" -n 0
 ```
+
+## References
+
+* https://pulsar.apache.org/docs/en/sql-deployment-configurations/
+* https://pulsar.apache.org/docs/en/sql-getting-started/
+* https://pulsar.apache.org/docs/en/sql-rest-api/
+* https://pulsar.apache.org/docs/en/sql-overview/
+* https://www.slideshare.net/streamnative/interactive-analytics-on-pulsar-with-pulsar-sql-pulsar-virtual-summit-europe-2021
+* https://www.slideshare.net/streamnative/trino-a-ludicrously-fast-query-engine-pulsar-summit-na-2021
+* https://www.slideshare.net/streamnative/interactive-querying-of-streams-using-apache-pulsarjerry-peng
+* https://www.slideshare.net/streamnative/using-the-flipn-stack-for-edge-ai-flink-nifi-pulsar-pulsar-virtual-summit-europe-2021
+
+## Pulsar SQL / PrestoSQL - Trino
+
+![pulsar](https://pulsar.apache.org/docs/assets/pulsar-sql-arch-1.png)
