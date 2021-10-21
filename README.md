@@ -189,6 +189,32 @@ select max(gputempf) as maxgputempf, max(cputemp) as maxcputemp, max(memory) as 
 
 select max(gputempf) as maxgputempf, max(cputemp) as maxcputemp, max(memory) as maxmemory, min(gputempf) as mingputempf, count(*) as rowcount, min(cputemp) as mincputemp, min(memory) as minmemory, avg(top1pct) as avgtop1pct, avg(try_cast(gputempf as double)) as avggputempf from pulsar."public/default".iotjetsonjson;
 ```
+## Sink
+
+```
+bin/pulsar-admin sinks create --archive ./connectors/pulsar-io-jdbc-postgres-2.8.0.nar --inputs stocks --name stocks-postgres-jdbc-sink --sink-config-file conf/pgsql.yml --parallelism 1
+bin/pulsar-admin sinks list --tenant public --namespace default
+bin/pulsar-admin sinks get --tenant public --namespace default --name stocks-postgres-jdbc-sink 
+bin/pulsar-admin sinks status --tenant public --namespace default --name stocks-postgres-jdbc-sink 
+
+```
+
+## Trino Tables
+
+```
+trino> create schema memory.sn;
+CREATE SCHEMA
+trino> show tables from memory.sn;
+ Table
+-------
+(0 rows)
+
+Query 20211021_234613_00038_b9s2d, FINISHED, 1 node
+Splits: 19 total, 19 done (100.00%)
+0.22 [0 rows, 0B] [0 rows/s, 0B/s]
+```
+
+
 
 ## References
 
@@ -200,7 +226,9 @@ select max(gputempf) as maxgputempf, max(cputemp) as maxcputemp, max(memory) as 
 * https://www.slideshare.net/streamnative/trino-a-ludicrously-fast-query-engine-pulsar-summit-na-2021
 * https://www.slideshare.net/streamnative/interactive-querying-of-streams-using-apache-pulsarjerry-peng
 * https://www.slideshare.net/streamnative/using-the-flipn-stack-for-edge-ai-flink-nifi-pulsar-pulsar-virtual-summit-europe-2021
+* https://trino.io/docs/current/sql/create-schema.html
 
 ## Pulsar SQL / PrestoSQL - Trino
 
 ![pulsar](https://pulsar.apache.org/docs/assets/pulsar-sql-arch-1.png)
+
