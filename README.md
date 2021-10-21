@@ -142,7 +142,7 @@ CREATE TABLE pulsar."public/default".weathersink
  station_id  varchar , 
  latitude double, 
  longitude double, 
- observation_time_rfc822  STRING , 
+ observation_time_rfc822  varchar , 
  weather_string  varchar , 
  temperature_string varchar   ,
  temp_f DOUBLE, temp_c double, 
@@ -169,7 +169,7 @@ CREATE TABLE pulsar."public/default".weathersink
  icon_url_name  varchar , 
  ob_url  varchar , 
  disclaimer_url  varchar ,
- copyright_url  STRING , 
+ copyright_url  varchar , 
  privacy_policy_url  varchar 
 )
 
