@@ -214,6 +214,54 @@ trino> show tables from memory.sn;
 Query 20211021_234613_00038_b9s2d, FINISHED, 1 node
 Splits: 19 total, 19 done (100.00%)
 0.22 [0 rows, 0B] [0 rows/s, 0B/s]
+
+trino> select * from memory.sn.weather;
+
+ nonamespaceschemalocation | version |                      location                      |             observation_ti
+---------------------------+---------+----------------------------------------------------+---------------------------
+ NULL                      | 1.0     | Litchfield Municipal Airport, IL                   | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Point Pleasant, Mason County Airport, WV           | Last Updated on Oct 20 202
+ NULL                      | 1.0     | CARRINGTON, ND                                     | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Perry-Foley, Perry-Foley Airport, FL               | Last Updated on May 21 202
+ NULL                      | 1.0     | Corona/Lincoln, NM                                 | Last Updated on Sep 30 201
+ NULL                      | 1.0     | Blanding, UT                                       | Last Updated on Jun 28 201
+ NULL                      | 1.0     | San Antonio Boerne Stage Field, TX                 | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Idabel, Mc Curtain County Regional Airport, OK     | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Andalusia, Andalusia-Opp Municipal Airport, AL     | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Cleveland, TX                                      | Last Updated on Oct 20 202
+ NULL                      | 1.0     | CANDO, ND                                          | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Greensboro, Greene County Regional Airport, GA     | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Sisseton, Sisseton Municipal Airport, SD           | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Keystone Airpark, FL                               | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Logan County Airport, IL                           | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Wilkerson Pass, CO                                 | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Clayton Lake, ME                                   | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Torreon, NM                                        | Last Updated on Feb 26 201
+ NULL                      | 1.0     | Fort Payne, Isbell Field Airport, AL               | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Dryden - Terrell County Airport, TX                | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Corning Municipal Airport, AR                      | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Walhalla Municipal Airport, ND                     | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Boundary County Airport, ID                        | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Albertville, Albertville Municipal Airport, AL     | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Chamberlain, Chamberlain Municipal Airport, SD     | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Mount Werner, CO                                   | Last Updated on Jul 21 201
+ NULL                      | 1.0     | Cherokee County Airport, GA                        | Last Updated on Oct 3 2011
+ NULL                      | 1.0     | Scottsboro Municipal Airport, AL                   | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Knox County Airfield, OH                           | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Harvey Municipal Airport, ND                       | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Sunlight, CO                                       | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Hanksville, UT                                     | Last Updated on Sep 30 201
+ NULL                      | 1.0     | Cottonwood Pass, CO                                | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Edwards Air Force Auxiliary North Base, CA         | Last Updated on Oct 20 202
+ NULL                      | 1.0     | Rochester - St. Mary's Hospital Heliport, MN       | Last Updated on Oct 20 202
+ NULL                      | 1.0     | LINTON, ND                                         | Last Updated on Oct 20 202
+ NULL                      | 1.0     | La Grange, Fayette Regional Air Center Airport, TX | Last Updated on Oct 20 202
+(37 rows)
+
+Query 20211021_235119_00086_b9s2d, FINISHED, 1 node
+Splits: 22 total, 22 done (100.00%)
+0.24 [37 rows, 32KB] [157 rows/s, 136KB/s]
+
 ```
 
 
