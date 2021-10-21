@@ -186,6 +186,8 @@ bin/pulsar-client consume "persistent://public/default/iotjetsonjson" -s "iotjjr
 
 ```
 select max(gputempf) as maxgputempf, max(cputemp) as maxcputemp, max(memory) as maxmemory from pulsar."public/default".iotjetsonjson;
+
+select max(gputempf) as maxgputempf, max(cputemp) as maxcputemp, max(memory) as maxmemory, min(gputempf) as mingputempf, count(*) as rowcount, min(cputemp) as mincputemp, min(memory) as minmemory, avg(top1pct) as avgtop1pct, avg(try_cast(gputempf as double)) as avggputempf from pulsar."public/default".iotjetsonjson;
 ```
 
 ## References
